@@ -1,8 +1,10 @@
 import { useState } from "react";
 import CardBack from "./components/CardBack";
 import CardFront from "./components/CardFront";
-import Form from "./components/CardForm";
 import style from "./css/App.module.css";
+
+// @ts-ignore
+import Form from "./components/CardForm";
 
 function App() {
   return (
