@@ -6,13 +6,13 @@ import Complete from "./Complete";
 const Form = () => {
   const [submit, setSubmit] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: Event) => {
     e.preventDefault();
     setSubmit(!submit);
     console.log("submit");
   };
 
-  function handleInput(e) {
+  function handleInput(e: Event) {
     document.querySelector(`#card-${e.target.name}`).innerText = e.target.value;
     if (e.target.name == "number") {
       let str = e.target.value.replaceAll(" ", "");
@@ -23,7 +23,7 @@ const Form = () => {
     }
   }
 
-  function validateInput(e) {
+  function validateInput(e: Event) {
     let element =
       e.target.parentNode.childNodes[e.target.parentNode.childNodes.length - 1];
 
