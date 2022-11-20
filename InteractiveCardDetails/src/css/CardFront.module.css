@@ -1,0 +1,45 @@
+.Card {
+  background-image: url("../assets/bg-card-front.png");
+  background-size: contain;
+  height: 245px;
+  width: 447px;
+  color: var(--White);
+  font-size: var(--Font-size);
+  box-shadow: 0 20px 40px 20px rgba(0, 0, 0, 0.151);
+  border-radius: 12px;
+}
+
+.Content {
+  padding: var(--lg);
+  display: grid;
+  height: calc(100% - var(--lg) * 2);
+  grid-template-rows: 50% 1fr 1fr;
+  grid-template-areas:
+    "logo nan nan"
+    "cardNumber cardNumber cardNumber "
+    "cardName cardName cardDate";
+  justify-content: space-between;
+  align-items: end;
+}
+
+.Logo {
+  grid-area: logo;
+  background-image: url("../assets/card-logo.svg");
+  width: 84px;
+  height: 47px;
+  align-self: start;
+}
+
+.Number {
+  grid-area: cardNumber;
+  font-size: 28px;
+}
+
+.Name {
+  grid-area: cardName;
+}
+
+.Date {
+  grid-area: cardDate;
+  justify-self: end;
+}

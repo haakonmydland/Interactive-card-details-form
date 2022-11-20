@@ -1,0 +1,83 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  display: grid;
+  grid-template-areas:
+    "name name"
+    "number number"
+    "date cvc"
+    "button button";
+  gap: var(--md);
+  max-width: 420px;
+  min-width: 420px;
+  align-items: center;
+}
+
+.title {
+  display: block;
+  text-transform: uppercase;
+  color: var(--Very-dark-violet);
+  padding: var(--sm) 0;
+}
+
+.input {
+  font-size: var(--Font-size);
+  color: var(--Very-dark-violet);
+  padding: var(--sm);
+  border-radius: var(--sm);
+  border: var(--Light-grayish-violet) solid 1px;
+  /* margin-bottom: var(--md); */
+  width: calc(100% - var(--sm) * 2);
+}
+
+.input:focus {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: var(--sm);
+  border-image: linear-gradient(to right, var(--Linear-gradient)) 1;
+  outline: none;
+}
+
+.name {
+  grid-area: name;
+}
+
+.number {
+  grid-area: number;
+}
+
+.date {
+  grid-area: date;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: var(--sm);
+}
+.date > .title {
+  grid-column: span 2;
+}
+
+.cvc {
+  grid-area: cvc;
+}
+
+.button {
+  grid-area: button;
+  width: 100%;
+  background-color: var(--Very-dark-violet);
+  color: var(--White);
+  padding: var(--md);
+  border-radius: var(--sm);
+}
+
+.invalid {
+  color: var(--Red-input-errors);
+  font-size: 14px;
+  padding: var(--sm) 0;
+  opacity: 0;
+  width: 100%;
+  display: block;
+  grid-column: span 2;
+}

@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 420px;
+  min-width: 420px;
+  gap: var(--xl);
+}
+
+.image {
+  max-width: 70px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--md);
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 24px;
+  color: var(--Very-dark-violet);
+}
+
+.sub {
+  color: var(--Dark-grayish-violet);
+}
+
+.button {
+  width: 100%;
+  background-color: var(--Very-dark-violet);
+  color: var(--White);
+  padding: var(--md);
+  border-radius: var(--sm);
+}

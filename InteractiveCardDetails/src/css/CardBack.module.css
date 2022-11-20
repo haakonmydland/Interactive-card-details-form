@@ -1,0 +1,23 @@
+.Card {
+  background-image: url("../assets/bg-card-back.png");
+  background-size: contain;
+  height: 245px;
+  width: 447px;
+  color: var(--White);
+  font-size: var(--Font-size);
+  position: relative;
+  box-shadow: 0 20px 40px 20px rgba(0, 0, 0, 0.151);
+  border-radius: 12px;
+}
+.cvc {
+  position: absolute;
+  right: 10%;
+  left: 11%;
+  bottom: 44%;
+  top: 42%;
+  text-align: right;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: var(--sm);
+}

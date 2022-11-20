@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --Linear-gradient: hsl(249, 99%, 64%), hsl(278, 94%, 30%);
+  --Red-input-errors: hsl(0, 100%, 66%);
+
+  /* ### Neutral */
+
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+
+  --Font-size: 18px;
+
+  /* spacing */
+
+  --sm: 0.5rem;
+  --md: 1rem;
+  --lg: 1.5rem;
+  --xl: 2.5rem;
+  --xxl: 5rem;
+}
+
+* {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: var(--Font-size);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  min-width: 375px;
+  min-height: 100vh;
+}
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+
+@media screen and (max-width: 1086px) {
+  body::before {
+    background-image: url("../assets/bg-main-mobile.png");
+    background-size: cover;
+    bottom: 60%;
+  }
+}
